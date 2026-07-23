@@ -1,4 +1,4 @@
-FROM php:8.3-fpm-alpine
+FROM php:8.4-fpm-alpine
 
 # Установка системных зависимостей и инструментов сборки
 RUN apk add --no-cache \
@@ -24,5 +24,5 @@ RUN chown -R www-data:www-data /var/www
 
 USER www-data
 
-EXPOSE 9001
+EXPOSE 9000
 CMD ["php-fpm"]
